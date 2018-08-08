@@ -1,0 +1,24 @@
+<?php
+/**
+ * @file nodejs_views.module
+ * 
+ */
+
+use Drupal\Core\Entity\EntityInterface;
+
+/**
+ * Implements hook_entity_presave().
+ */
+function nodejs_views_entity_presave(EntityInterface $entity) {
+
+  // Hard coded entity and bundled.
+  if (($entity->getEntityTypeId() == 'entity_type') &&
+    ($entity->bundle() == 'bundle')) {
+    
+    $nodejs_views = \Drupal::service('nodejs_views_controller');
+    
+    $nodejs_views->refreshView('view_id.view_display');
+
+  }
+   
+}

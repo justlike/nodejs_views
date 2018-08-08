@@ -1,0 +1,9 @@
+nodejs_views.view:
+  dependencies:
+    - core/drupal
+    - core/jquery
+    - core/jquery.once
+    - core/drupalSettings
+  version: 1.x
+  js:
+    js/nodejs_views.view.js: {}

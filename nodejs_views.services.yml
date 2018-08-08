@@ -1,0 +1,8 @@
+services:
+  nodejs_views_route_subscriber:
+    class: Drupal\nodejs_views\Routing\NodejsViewsRouteSubscriber
+    tags: 
+      - { name: event_subscriber }
+  nodejs_views_controller:
+    class: Drupal\nodejs_views\Controller\NodejsViewsController
+    arguments: ['@nodejs.nodejs']

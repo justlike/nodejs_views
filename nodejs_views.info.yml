@@ -1,0 +1,11 @@
+name: Nodejs Views
+type: module
+description: Refresh views with Nodejs
+package: nodejs
+version: '8.x-1.x'
+core: '8.x'
+configure: nodejs_views.config
+dependencies:
+  - nodejs:nodejs
+  - drupal:views
+  
